@@ -1,12 +1,20 @@
-//import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Shop from './Pages/Shop';
 
 
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Shop/>}/>
+      </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
